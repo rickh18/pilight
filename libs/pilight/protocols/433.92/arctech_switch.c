@@ -35,8 +35,8 @@
 #define PULSE_MULTIPLIER	4
 #define MIN_PULSE_LENGTH	250
 #define MAX_PULSE_LENGTH	320
-#define AVG_PULSE_LENGTH	315
-#define RAW_LENGTH				132
+#define AVG_PULSE_LENGTH	314
+#define RAW_LENGTH		132
 
 static int validate(void) {
 	if(arctech_switch->rawlen == RAW_LENGTH) {
@@ -126,7 +126,7 @@ static void clearCode(void) {
 
 static void createStart(void) {
 	arctech_switch->raw[0]=(AVG_PULSE_LENGTH);
-	arctech_switch->raw[1]=(9*AVG_PULSE_LENGTH);
+	arctech_switch->raw[1]=(8*AVG_PULSE_LENGTH);
 }
 
 static void createId(int id) {
